@@ -7,21 +7,6 @@ import java.util.Random;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertTrue;
 
-/**
- * This is a basic set of unit tests for Sorting.
- *
- * Passing these tests doesn't guarantee any grade on these assignments. These
- * student JUnits that we provide should be thought of as a sanity check to
- * help you get started on the homework and writing JUnits in general.
- *
- * We highly encourage you to write your own set of JUnits for each homework
- * to cover edge cases you can think of for each data structure. Your code must
- * work correctly and efficiently in all cases, which is why it's important
- * to write comprehensive tests to cover as many cases as possible.
- *
- * @author CS 1332 TAs
- * @version 1.0
- */
 public class SortingStudentTest {
 
     private static final int TIMEOUT = 200;
@@ -133,45 +118,24 @@ public class SortingStudentTest {
         assertArrayEquals(sortedArray, unsortedArray);
     }
 
-    /**
-     * Class for testing proper sorting.
-     */
     private static class TeachingAssistant {
         private String name;
 
-        /**
-         * Create a teaching assistant.
-         *
-         * @param name name of TA
-         */
+
         public TeachingAssistant(String name) {
             this.name = name;
         }
-
-        /**
-         * Get the name of the teaching assistant.
-         *
-         * @return name of teaching assistant
-         */
+        
         public String getName() {
             return name;
         }
 
-        /**
-         * Set the name of the teaching assistant.
-         *
-         * @param name name of the teaching assistant
-         */
+
         public void setName(String name) {
             this.name = name;
         }
 
-        /**
-         * Create a comparator that compares the names of the teaching
-         * assistants.
-         *
-         * @return comparator that compares the names of the teaching assistants
-         */
+
         public static ComparatorPlus<TeachingAssistant> getNameComparator() {
             return new ComparatorPlus<TeachingAssistant>() {
                 @Override
@@ -201,25 +165,16 @@ public class SortingStudentTest {
         }
     }
 
-    /**
-     * Inner class that allows counting how many comparisons were made.
-     */
+
     private abstract static class ComparatorPlus<T> implements Comparator<T> {
         private int count;
 
-        /**
-         * Get the number of comparisons made.
-         *
-         * @return number of comparisons made
-         */
+
         public int getCount() {
             return count;
         }
 
-        /**
-         * Increment the number of comparisons made by one. Call this method in
-         * your compare() implementation.
-         */
+
         public void incrementCount() {
             count++;
         }
