@@ -24,12 +24,7 @@ public class GraphAlgorithmsStudentTest {
         undirectedGraph = createUndirectedGraph();
     }
 
-    /**
-     * Creates a directed graph.
-     * The graph is depicted in the pdf.
-     *
-     * @return the completed graph
-     */
+
     private Graph<Integer> createDirectedGraph() {
         Set<Vertex<Integer>> vertices = new HashSet<Vertex<Integer>>();
         for (int i = 1; i <= 7; i++) {
@@ -49,12 +44,7 @@ public class GraphAlgorithmsStudentTest {
         return new Graph<Integer>(vertices, edges);
     }
 
-    /**
-     * Creates an undirected graph.
-     * The graph is depicted in the pdf.
-     *
-     * @return the completed graph
-     */
+
     private Graph<Character> createUndirectedGraph() {
         Set<Vertex<Character>> vertices = new HashSet<>();
         for (int i = 65; i <= 70; i++) {
